@@ -1,0 +1,23 @@
+{
+  "name": "Simpsons_API",
+  "version": "1.0.0",
+  "description": "This is a Simpsons API done as an exercise at Trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "simpsons",
+    "api"
+  ],
+  "author": "Leticia Lima <leticia.duarte.lima@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.30"
+  }
+}

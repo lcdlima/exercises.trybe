@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Consulta de Cep</title>
+  </head>
+  <body>
+    <form action="/cep" method="POST">
+      <input name="cep_typed" type="text" />
+      <button type="submit">Buscar Cep</button>
+    </form>
+    <% if (cep_encontrado) { %>
+      <p>CEP: <%= cep_encontrado.cep %></p>
+      <p>Logradouro: <%= cep_encontrado.logradouro %></p>
+      <p>Bairro: <%= cep_encontrado.bairro %></p>
+      <p>Cidade: <%= cep_encontrado.cidade %></p>
+      <p>UF: <%= cep_encontrado.uf %></p>
+    <% } %>
+    <% if (mensagem) { %>
+      <p><%= mensagem %></p>
+    <% } %>
+  </body>
+</html>

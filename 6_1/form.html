@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1 class="text-center">Curriculum</h1>
+  <form action="post">
+    <fieldset class="container">
+        <legend>Personal Info</legend>
+        <div>
+          <label for='name'>Name</label>
+          <input id='name' class='form-control' type='text' maxlength='40' required>
+        </div>
+        <div> 
+          <label for='email'>E-Mail</label>
+          <input id='email' class='form-control' type='text' maxlength="50" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+        <div>
+          <label for='cpf'>CPF</label>
+          <input id='cpf' class='form-control' type='text' maxlength="11" required>
+        </div>
+        <div>
+          <label for='address'>Address</label>
+          <input id='address' class='form-control' type='text' maxlength="200" required>
+        </div>
+        <div>
+          <label for='city'>City</label>
+          <input id='city' class='form-control' type='text' maxlength="28" required>
+        </div>
+        <div>
+          <label for='states'>Select Your State</label>
+          <select id='states' required>
+          </select>
+        </div>
+        <div>
+          <label for='house'><input type='radio' id='house' name='living' value='house' required>House</label>
+          <label for='apt'><input type='radio' id='apt' name='living' value='apt' required>Apartment</label>
+        </div>
+    </fieldset>
+    <fieldset class="container">
+        <legend>Previous Experience</legend>
+        <div>
+            <label for='summary'>Resume Summary</label>
+            <br>
+            <textarea id='summary' class='form-control' placeholder="Type Here" cols='100' rows='10' maxlength="1000" required></textarea>
+        </div>
+        <div>
+            <label for='position'>Position</label>
+            <input id='summary' class='form-control' type='text' maxlength="40" required>
+        </div>
+        <div>
+            <label for='description'>Description</label>
+            <br>
+            <textarea id='description' class='form-control' placeholder="Type Here" cols='100' rows='10' maxlength="500" required></textarea>
+        </div>
+        <div>
+            <label for='startDate'>Start Date</label>
+            <input id='startDate' class='form-control' type='text' placeholder="mm/dd/yyyy" maxlength="10" required>
+        </div>
+    </fieldset>
+  </form>
+  <button id='button1' class="btn" type="submit">Submit</button>
+  <button id='button2' class="btn" type="reset">Reset</button>
+</body>
+</html>

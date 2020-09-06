@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - Lecture 7</title>
+    <script>
+        window.onload = function() {
+            //let bckgcolor = localStorage.bcolor;
+            //if (bckgcolor) document.body.style.backgroundColor = bckgcolor;
+            //let bcolor = document.querySelectorAll("button.backgroundColorButtons");
+            //for (let i = 0; i < bcolor.length; i += 1){
+                //bcolor[i].addEventListener("click", function(event) {
+                    //let color = bcolor[i].innerHTML;
+                    //localStorage.setItem("bcolor", color);
+                    //document.body.style.backgroundColor = color;
+                //})
+            //}
+
+            let bckgcolor = localStorage.bcolor;
+            if (bckgcolor) document.body.style.backgroundColor = bckgcolor;
+            let bcolor = document.querySelector(".backgroundColorBox");
+            bcolor.addEventListener("keyup", function(event) {
+                let color = bcolor.value;
+                localStorage.setItem("bcolor", color);
+                document.body.style.backgroundColor = color;
+            })
+
+            //let textcolor = localStorage.tcolor;
+            //if (textcolor) document.body.style.color = textcolor;
+            //let tcolor = document.querySelectorAll("button.textColorButton");
+            //for (let i = 0; i < tcolor.length; i += 1) {
+                //tcolor[i].addEventListener("click", function(event) {
+                    //let color = tcolor[i].innerHTML;
+                    //localStorage.setItem("tcolor", color);
+                    //document.body.style.color = color;
+                //})
+            //}
+
+            let textcolor = localStorage.tcolor;
+            if (textcolor) document.body.style.color = textcolor;
+            let tcolor = document.querySelector(".textColorBox");
+            tcolor.addEventListener("keyup", function(event) {
+                let color = tcolor.value;
+                localStorage.setItem("tcolor", color);
+                document.body.style.color = color;
+            })
+
+            let textsize = localStorage.tsize;
+            if (textsize) document.body.style.fontSize = textsize;
+            let tsize = document.querySelectorAll("button.textSizeButton");
+            for (let i = 0; i < tsize.length; i += 1) {
+                tsize[i].addEventListener("click", function(event){
+                    let size = tsize[i].innerHTML;
+                    localStorage.setItem("tsize", size);
+                    document.body.style.fontSize = size;
+                })
+            }
+
+            let linespacing = localStorage.lspacing;
+            if (linespacing) document.body.style.lineHeight = linespacing;
+            let lspacing = document.querySelectorAll("button.lineSpacingButton");
+            for (let i = 0; i < lspacing.length; i += 1) {
+                lspacing[i].addEventListener("click", function(event){
+                    let spacing = lspacing[i].innerHTML;
+                    localStorage.setItem("lspacing", spacing);
+                    document.body.style.lineHeight = spacing;
+                })
+            }
+
+            let fFamily = document.querySelectorAll("button.fontFamilyButton");
+            for (let i = 0; i < fFamily.length; i += 1) {
+                fFamily[i].addEventListener("click", function(event){
+                    let family = fFamily[i].innerHTML;
+                    localStorage.setItem("fFamily", family);
+                    document.body.style.fontFamily = family;
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Exercise - Lecture 7</h1>
+        <section id="options">
+            <div>
+                <p>Choose the background color: </p>
+                <!--<button class="backgroundColorButtons">Black</button>-->
+                <!--<button class="backgroundColorButtons">Blue</button>-->
+                <!--<button class="backgroundColorButtons">Red</button>-->
+                <input maxlength="50" type="text" class="backgroundColorBox" placeholder="Type here">
+            </div>
+            <div>
+                <p>Choose the text color: </p>
+                <!--<button class="textColorButton">White</button>-->
+                <!--<button class="textColorButton">Blue</button>-->
+                <!--<button class="textColorButton">Black</button>-->
+                <input maxlength="50" type="text" class="textColorBox" placeholder="Type here">
+            </div>
+            <div>
+                <p>Choose the text size: </p>
+                <button class="textSizeButton">12px</button>
+                <button class="textSizeButton">16px</button>
+                <button class="textSizeButton">20px</button>
+            </div>
+            <div>
+                <p>Choose the line spacing: </p>
+                <button class="lineSpacingButton">1.0</button>
+                <button class="lineSpacingButton">1.5</button>
+                <button class="lineSpacingButton">2.0</button>
+            </div>
+            <div>
+                <p>Choose the font family: </p>
+                <button class="fontFamilyButton">Serif</button>
+                <button class="fontFamilyButton">Sans-Serif</button>
+                <button class="fontFamilyButton">Monospace</button>
+            </div>
+        </section>
+    </header>
+    <section>
+        <h2>Lorem Ipsun</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet turpis non est viverra, vitae porttitor justo hendrerit. Cras a eros porttitor, fermentum velit at, commodo metus. Quisque ligula libero, imperdiet a turpis quis, congue imperdiet ipsum. Phasellus libero massa, tincidunt eu ultrices et, placerat id augue. Sed egestas efficitur augue, mattis scelerisque dui ullamcorper a. Sed et massa ac tortor euismod fermentum. Nullam ac ex efficitur, feugiat magna nec, mattis orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        <p>Nam sed sodales elit. Ut tellus est, lacinia ac blandit non, sodales non tellus. Vivamus non elementum est. Donec laoreet arcu ac orci consectetur pretium. Sed sed massa ornare, iaculis ex non, maximus nibh. Nam at ornare nisl, sed gravida libero. Donec pharetra ligula nunc, eu convallis enim pretium ut. Donec pulvinar semper neque ac pretium. Vivamus pulvinar placerat elit, venenatis lacinia quam blandit ac. Etiam sit amet lacus mollis mi volutpat varius. Proin eleifend id eros nec hendrerit. Sed vitae turpis lorem. Proin gravida metus sed fringilla pellentesque. Duis vestibulum, nulla in bibendum fermentum, mi elit malesuada turpis, id ornare arcu ex quis enim. Nullam vel aliquam magna, a rhoncus diam.</p>
+        <p>Ut velit enim, tristique iaculis diam at, tincidunt hendrerit quam. Vestibulum ultrices, lacus et ornare lacinia, elit magna fringilla justo, et interdum lectus odio vel nulla. Aliquam sed lorem sed tellus posuere auctor. Donec elementum consectetur leo at efficitur. Proin rutrum nibh vitae velit aliquet facilisis. Suspendisse a lorem efficitur elit convallis faucibus vel eget nibh. Donec lacus ante, rhoncus in dictum sed, interdum et dui. Mauris quis est vitae enim rhoncus sodales ac vel purus.</p>
+        <p>Morbi enim quam, porta a augue vitae, varius accumsan nisi. Ut mattis tortor risus, vitae rutrum augue condimentum nec. Curabitur sed est et odio sagittis bibendum. Nullam volutpat aliquet tortor a scelerisque. Duis efficitur augue enim, id ultricies augue semper ac. Donec id eleifend justo. Donec ut sapien odio. Suspendisse velit mi, consectetur a massa sit amet, ultricies cursus libero. Sed pretium eros ac justo feugiat sollicitudin. Praesent est libero, bibendum luctus tristique eget, dapibus eu nunc. In libero elit, aliquam non magna sed, accumsan sagittis diam.</p>
+        <p>Aliquam luctus augue diam, id dignissim massa rutrum sit amet. Sed consectetur nisl quis mollis auctor. Aliquam cursus condimentum nisi et aliquet. Maecenas eget congue velit, quis consectetur lectus. Curabitur in turpis sed nisi pharetra lobortis non eget sem. Vestibulum elit tortor, commodo quis euismod eu, hendrerit imperdiet quam. Quisque posuere massa eget nisl varius, a semper augue ultricies. Morbi tincidunt diam in ipsum malesuada tempus ultricies eu dui. Quisque porta erat quis fringilla rhoncus. Nam justo ligula, finibus a viverra in, elementum eget leo. Integer a posuere ligula.</p>
+    </section>
+    <style>
+        div {
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        #options {
+            border: black;
+            border-style: solid;
+            padding: 20px;
+        }
+    </style>
+</body>
+</html>
